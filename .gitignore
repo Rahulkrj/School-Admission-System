@@ -1,0 +1,21 @@
+# intellij stuff
+*.ipr
+*.iws
+.idea
+# generated files
+/.gradle/
+/build/
+/client/build/
+/server/build/
+*.iml
+liquibase-diffChangeLog.yml
+application-local.yml
+.terraform/
+.terraform.lock.hcl
+/server/terraform/infrastructure/lambdas/swagger_authentication.zip
+# Python virtual env
+venv
+*.egg-info
+__pycache__
+# created after running liquibase update
+/server/derby.log
