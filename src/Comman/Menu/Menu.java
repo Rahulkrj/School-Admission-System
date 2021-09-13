@@ -10,7 +10,7 @@ public class Menu {
 
 
   public void displayMenu() {
-    String menu = "1.Register\n2.Admission\n3.Payment Detail\n4.Class Allot\n5.View All Register Students";
+    String menu = "1.Register\n2.Admission\n3.Payment Detail\n4.Class Allot\n5.View All Register Students\n0. Exit";
     System.out.println(menu);
     System.out.print("Choose One option  : ");
     menuHandel();
@@ -21,7 +21,7 @@ public class Menu {
     switch (inputService.getInt()) {
       case 1:
         System.out.println("🤡🤡🤡🤡🤡🤡 Register 🤡🤡🤡🤡🤡🤡");
-          registerService.registerStudent();
+        registerService.registerStudent();
         displayMenu();
         break;
 
@@ -40,6 +40,9 @@ public class Menu {
         System.out.println("All Register Students");
         registerService.getAllStudents();
         displayMenu();
+        break;
+      case 0:
+        System.exit(0);
         break;
 
       default:
