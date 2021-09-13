@@ -36,6 +36,10 @@ public class RegisterService {
     return true;
   }
 
+  public StudentModel getStudent(int studentId){
+    return studentMap.get(studentId);
+  }
+
   public void getAllStudents() {
     Set<Integer> keySet = studentMap.keySet();
     for (Integer key : keySet) {

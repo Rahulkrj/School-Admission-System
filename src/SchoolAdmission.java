@@ -1,5 +1,4 @@
 import Comman.Menu.Menu;
-import Student.StudentModel;
 
 public class SchoolAdmission {
 
