@@ -2,6 +2,7 @@
 *.ipr
 *.iws
 .idea
+out
 # generated files
 /.gradle/
 /build/
