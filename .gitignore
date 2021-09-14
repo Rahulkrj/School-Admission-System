@@ -3,6 +3,7 @@
 *.iws
 .idea
 out
+dump
 # generated files
 /.gradle/
 /build/

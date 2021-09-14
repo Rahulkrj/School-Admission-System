@@ -10,7 +10,7 @@ import java.util.Set;
 
 public class RegisterService {
 
-  private static int studentId = 1;
+  private static int studentId = 0;
   private static Map<Integer, StudentModel> studentMap;
   private final InputService inputService;
   private final StorageService storageService;
