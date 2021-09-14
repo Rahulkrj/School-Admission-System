@@ -1,4 +1,4 @@
-package Admission.Payment;
+package Payment;
 
 /**
  * @author Rahul

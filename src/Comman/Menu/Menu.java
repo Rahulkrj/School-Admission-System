@@ -1,7 +1,7 @@
 package Comman.Menu;
 
 import Admission.AdmissionService;
-import Admission.Payment.PaymentService;
+import Payment.PaymentService;
 import Comman.Enum.Message;
 import Comman.Input.InputService;
 import Registration.RegisterService;
@@ -12,6 +12,9 @@ public class Menu {
   private AdmissionService admissionService = new AdmissionService();
   private PaymentService paymentService = new PaymentService();
 
+  public Menu() {
+    registerService.sync();
+  }
 
   public void displayMenu() {
     String menu = "1.Register\n2.Admission\n3.Payment Detail\n4.Class Allot"

@@ -11,25 +11,6 @@ public class StudentModel {
   public StudentModel() {
   }
 
-  public StudentModel(String name, String dob, String contactNo, String fatherName,
-      String address) {
-    this.name = name;
-    this.dob = dob;
-    this.contactNo = contactNo;
-    this.fatherName = fatherName;
-    this.address = address;
-  }
-
-  public StudentModel(int id, String name, String dob, String contactNo, String fatherName,
-      String address) {
-    this.id = id;
-    this.name = name;
-    this.dob = dob;
-    this.contactNo = contactNo;
-    this.fatherName = fatherName;
-    this.address = address;
-  }
-
   public int getId() {
     return id;
   }
@@ -80,12 +61,12 @@ public class StudentModel {
 
   @Override
   public String toString() {
-    return "id=" + id +
+    return "id='" + id + '\'' +
         "\nname='" + name + '\'' +
         "\ndob='" + dob + '\'' +
         "\ncontactNo='" + contactNo + '\'' +
         "\nfatherName='" + fatherName + '\'' +
-        "\naddress='" + address + '\''+"\n";
+        "\naddress='" + address + '\''+"\n\n";
   }
 
 }

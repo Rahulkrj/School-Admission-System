@@ -3,6 +3,7 @@
 *.iws
 .idea
 out
+dump
 # generated files
 /.gradle/
 /build/
@@ -20,3 +21,4 @@ venv
 __pycache__
 # created after running liquibase update
 /server/derby.log
+*.txt
