@@ -1,7 +1,7 @@
 package Comman.Menu;
 
 import Admission.AdmissionService;
-import Admission.Payment.PaymentService;
+import Payment.PaymentService;
 import Comman.Enum.Message;
 import Comman.Input.InputService;
 import Registration.RegisterService;

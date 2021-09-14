@@ -1,6 +1,6 @@
 package Admission;
 
-import Admission.Payment.PaymentModel;
+import Payment.PaymentModel;
 import Student.StudentModel;
 
 /**

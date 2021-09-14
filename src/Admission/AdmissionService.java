@@ -1,12 +1,9 @@
 package Admission;
 
-import Admission.Payment.PaymentFor;
-import Admission.Payment.PaymentModel;
-import Admission.Payment.PaymentService;
-import Admission.Payment.PaymentStatus;
+import Payment.PaymentFor;
+import Payment.PaymentModel;
+import Payment.PaymentService;
 import Comman.Input.InputService;
-import Registration.RegisterService;
-import Student.StudentModel;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;

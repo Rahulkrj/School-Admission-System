@@ -1,8 +1,8 @@
 package Comman.Input;
 
 import Admission.AdmissionModel;
-import Admission.Payment.PaymentMethod;
-import Admission.Payment.PaymentModel;
+import Payment.PaymentMethod;
+import Payment.PaymentModel;
 import Comman.Enum.Message;
 import Registration.RegisterService;
 import Student.StudentModel;
