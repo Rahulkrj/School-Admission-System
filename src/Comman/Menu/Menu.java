@@ -12,6 +12,9 @@ public class Menu {
   private AdmissionService admissionService = new AdmissionService();
   private PaymentService paymentService = new PaymentService();
 
+  public Menu() {
+    registerService.sync();
+  }
 
   public void displayMenu() {
     String menu = "1.Register\n2.Admission\n3.Payment Detail\n4.Class Allot"
