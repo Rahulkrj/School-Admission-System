@@ -1,6 +1,8 @@
 package Comman.Input;
 
 import Admission.AdmissionModel;
+import Admission.AdmissionService;
+import ClassAllotment.ClassAllotModel;
 import Payment.PaymentMethod;
 import Payment.PaymentModel;
 import Comman.Enum.Message;
@@ -67,6 +69,13 @@ public class InputService {
     return registerService.getStudent(getInt());
   }
 
+  public AdmissionModel findAdmissionInput() {
+    AdmissionService admissionService = new AdmissionService();
+    System.out.print("Enter admission id : ");
+    return admissionService.getAdmission(getInt());
+  }
+
+
   public PaymentModel getPaymentInput() {
     scanner = new Scanner(System.in);
     System.out.println("Enter payment details");
@@ -79,6 +88,20 @@ public class InputService {
             + PaymentMethod.CHEQUE + ", " + PaymentMethod.ONLINE + "): ");
     paymentModel.setPaymentMethod(PaymentMethod.valueOf(getString()));
     return paymentModel;
+  }
+
+  public ClassAllotModel classAllotInput() {
+    ClassAllotModel classAllotModel = new ClassAllotModel();
+    classAllotModel.setAdmissionModel(findAdmissionInput());
+    scanner = new Scanner(System.in);
+    classAllotModel.setClassName(classAllotModel.getAdmissionModel().getStandard());
+    System.out.print("Enter Class Teacher Name : ");
+    classAllotModel.setClassTeacher(getString());
+    System.out.print("Enter Section : ");
+    classAllotModel.setSection(getString());
+    System.out.print("Enter Session : ");
+    classAllotModel.setSession(getString());
+    return classAllotModel;
   }
 
 }
