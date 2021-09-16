@@ -1,6 +1,7 @@
 package Comman.Menu;
 
 import Admission.AdmissionService;
+import ClassAllotment.ClassAllotmentService;
 import Payment.PaymentService;
 import Comman.Enum.Message;
 import Comman.Input.InputService;
@@ -11,6 +12,7 @@ public class Menu {
   private RegisterService registerService = new RegisterService();
   private AdmissionService admissionService = new AdmissionService();
   private PaymentService paymentService = new PaymentService();
+  private ClassAllotmentService classAllotmentService = new ClassAllotmentService();
 
   public Menu() {
     registerService.sync();
@@ -18,7 +20,7 @@ public class Menu {
 
   public void displayMenu() {
     String menu = "1.Register\n2.Admission\n3.Payment Detail\n4.Class Allot"
-        + "\n5.View All Register Students\n6.View All Admissions\n7.View All Payments\n0. Exit";
+        + "\n5.View All Register Students\n6.View All Admissions\n7.View All Payments\n8.View Allotted Class\n0. Exit";
     System.out.println(menu);
     System.out.print("Choose One option  : ");
     menuHandel();
@@ -45,6 +47,8 @@ public class Menu {
 
       case 4:
         System.out.println("Class Allot");
+        classAllotmentService.classAllot();
+        displayMenu();
         break;
       case 5:
         System.out.println("All Register Students");
@@ -59,6 +63,11 @@ public class Menu {
       case 7:
         System.out.println("All Payments");
         paymentService.getAllPayments();
+        displayMenu();
+        break;
+      case 8:
+        System.out.println("All Allotted Class");
+        classAllotmentService.getAllottedClass();
         displayMenu();
         break;
       case 0:
